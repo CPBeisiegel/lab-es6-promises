@@ -130,16 +130,27 @@ makeBroccoli()
 
 // Bonus 2 - Promise all
 
-Promise.all(brusselsSprouts).then((value) => {
-  const step0 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step0}</li>`
-  const step1 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step1}</li>`
-  const step2 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step2}</li>`
-  const step3 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step3}</li>`
-  const step4 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step4}</li>`
-  const step5 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step5}</li>`
-  const step6 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step6}</li>`
-  const step7 = brusselsSprouts.push('Brussels sprouts are ready!')
-  const step8 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step7}</li>`
+const step0 = obtainInstruction('brusselsSprouts', 0)
+const step1 = obtainInstruction('brusselsSprouts', 1)
+const step2 = obtainInstruction('brusselsSprouts', 2)
+const step3 = obtainInstruction('brusselsSprouts', 3)
+const step4 = obtainInstruction('brusselsSprouts', 4)
+const step5 = obtainInstruction('brusselsSprouts', 5)
+const step6 = obtainInstruction('brusselsSprouts', 6)
+const step6 = obtainInstruction('brusselsSprouts', 6)
+
+
+Promise.all([step0, step1, step2, step3, step4, step5, step6]).then((value) => {
+  // fazer um forEach do value 
+  const dstp1 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step0}</li>`
+  const dstp2 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step1}</li>`
+  const dstp3 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step2}</li>`
+  const dstp4 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step3}</li>`
+  const dstp5 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step4}</li>`
+  const dstp6 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step5}</li>`
+  const dstp7 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step6}</li>`
+  const dstp8 = brusselsSprouts.push('Brussels sprouts are ready!')
+  const dstp9 = document.querySelector("#brusselsSprouts").innerHTML += `<li>${step7}</li>`
   document.querySelector("#brusselsSproutsImg").removeAttribute("hidden"); 
   
 })
